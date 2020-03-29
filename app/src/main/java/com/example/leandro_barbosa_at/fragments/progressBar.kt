@@ -36,18 +36,6 @@ class progressBar : Fragment() {
 
             })
 
-//            val nameObserver = Observer<String> { newName ->
-//                // Update the UI, in this case, a TextView.
-//                textView.text = newName
-//            }
-//
-//            // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
-//            fazeViewModel.faze!!.currentName.observe(viewLifecycleOwner, nameObserver)
-//            btnAvançar.setOnClickListener {
-//                val anotherName = "John Doe"
-//                fazeViewModel.faze.currentName.setValue(anotherName)
-//            }
-
         }
     }
 
