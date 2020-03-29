@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/primeiroEvento"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toTopOf="parent" />
@@ -48,6 +48,7 @@
                 android:id="@+id/RbEscolha1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
                 android:text="Correr em sua direção e acerta-lo com o escudo" />
 
             <RadioButton

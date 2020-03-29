@@ -32,6 +32,7 @@ class primeiraFase : Fragment() {
         activity?.let {
             fazeViewModel = ViewModelProviders.of(it).get(FazeViewModel::class.java)
 
+            fazeViewModel.faze.barraVida.apply { value = 50 }
         }
 
         btnAvançar.setOnClickListener {

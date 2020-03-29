@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import com.example.leandro_barbosa_at.FinalActivity
+import com.example.leandro_barbosa_at.FinalDerrotaActivity
 
 import com.example.leandro_barbosa_at.R
 import com.example.leandro_barbosa_at.viewModel.FazeViewModel
@@ -63,7 +64,7 @@ class terceiraFaze : Fragment() {
                     }else{
 
                         fazeViewModel.faze!!.fazeEscolha = 5
-                        val intent = Intent(activity!!.baseContext, FinalActivity::class.java)
+                        val intent = Intent(activity!!.baseContext, FinalDerrotaActivity::class.java)
                         var fazeEscolha = fazeViewModel.faze.fazeEscolha
                         intent.putExtra("fazeEscolha", fazeEscolha)
                         startActivity(intent)
@@ -93,10 +94,11 @@ class terceiraFaze : Fragment() {
                     if (RbEscolha1.isChecked){
 
                         fazeViewModel.faze!!.fazeEscolha = 7
-                        val intent = Intent(activity!!.baseContext, FinalActivity::class.java)
+                        val intent = Intent(activity!!.baseContext, FinalDerrotaActivity::class.java)
                         var fazeEscolha = fazeViewModel.faze.fazeEscolha
                         intent.putExtra("fazeEscolha", fazeEscolha)
                         startActivity(intent)
+                        fazeViewModel.faze.vida(25)
 
 
                     }else{
@@ -106,7 +108,7 @@ class terceiraFaze : Fragment() {
                         var fazeEscolha = fazeViewModel.faze.fazeEscolha
                         intent.putExtra("fazeEscolha", fazeEscolha)
                         startActivity(intent)
-                        fazeViewModel.faze.vida(25)
+
 
                     }
                 }
@@ -133,7 +135,7 @@ class terceiraFaze : Fragment() {
                     if (RbEscolha1.isChecked){
 
                         fazeViewModel.faze!!.fazeEscolha = 9
-                        val intent = Intent(activity!!.baseContext, FinalActivity::class.java)
+                        val intent = Intent(activity!!.baseContext, FinalDerrotaActivity::class.java)
                         var fazeEscolha = fazeViewModel.faze.fazeEscolha
                         intent.putExtra("fazeEscolha", fazeEscolha)
                         startActivity(intent)
