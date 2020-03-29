@@ -1,5 +1,7 @@
 package com.example.leandro_barbosa_at
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -26,8 +28,15 @@ class MainActivity : AppCompatActivity() {
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            val intent = Intent(Intent.ACTION_SENDTO).apply {
+                data = Uri.parse("mailto:") // only email apps should handle this
+                putExtra(Intent.EXTRA_EMAIL, "leandro.bpinto@al.infnet.edu.br")
+                putExtra(Intent.EXTRA_CC, "Nota do Jogo")
+                putExtra(Intent.EXTRA_TEXT, "De 1 a 10 o quanto voce gostou do jogo?")
+            }
+            if (intent.resolveActivity(packageManager) != null) {
+                startActivity(intent)
+            }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
