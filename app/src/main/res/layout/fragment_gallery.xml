@@ -11,10 +11,13 @@
         android:layout_width="175dp"
         android:layout_height="243dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/guerreiro"
+        app:layout_constraintBottom_toTopOf="@+id/rcyStatus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/guerreiro" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline9"
@@ -33,6 +36,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcyStatus"
         android:layout_width="0dp"
+        android:contentDescription="@string/suaImagem"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"

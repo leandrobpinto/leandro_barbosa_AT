@@ -16,6 +16,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
     <string name="historia">Voce é um pequeno aventureiro, que mora em Clamire no reino de Kaliatar, voce deseja ser um grande aventureiro, ficar mais forte e derrubar
         o rei de Kaliatar, o motivo disso tudo? Bem, digamos que a vila em que nasceu sofre uma forte opressão do rei e seu desejo e derruba-lo para libertar seu povo,
         isso o leva ate a escola de caveliros Hall of Valhalla, uma das melhores escolas de cavaleiros templarios do reino, mas o caminho até la e devasto de desafios
@@ -30,4 +31,5 @@
         Sem muita experiencia voce decide partir para cima... qual escolha voce vai eleger?
 
     </string>
+    <string name="guerreiro">guerreiro</string>
 </resources>
