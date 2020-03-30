@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.example.leandro_barbosa_at.FinalActivity
+import com.example.leandro_barbosa_at.MainActivity
 
 import com.example.leandro_barbosa_at.R
 import com.example.leandro_barbosa_at.viewModel.FazeViewModel
@@ -36,7 +37,7 @@ class segundaFaze : Fragment() {
 
         }
 
-        if(fazeViewModel.faze!!.fazeEscolha == 1){
+        if(fazeViewModel.faze!!.fazeEscolha == 1 || fazeViewModel.faze!!.fazeEscolhaVolta == 1){
             textViewEvento.text = "Uma sabia escolha... Sem muito conhecimento da criatura voce tenta apenas atingila com seu escudo, assim que voce corre na direção" +
                     "dela, a mesma lhe olha com um olhar um tanto quanto distante, seu olhar não parece estar designiado a voce mas mesmo assim a criatura avança" +
                     "com uma de suas garras em sua direção(como um soco) numa enorme rapidez, acertando seu escudo em cheio segurando o impacto. Por sorte voce estava com" +
@@ -56,8 +57,9 @@ class segundaFaze : Fragment() {
                     if (RbEscolha1.isChecked){
 
                         fazeViewModel.faze!!.fazeEscolha = 4
-                        findNavController().navigate(R.id.terceiraFaze)
                         fazeViewModel.faze.vida(25)
+                        findNavController().navigate(R.id.terceiraFaze)
+
                     }else{
 
                         fazeViewModel.faze!!.fazeEscolha = 6
@@ -70,7 +72,7 @@ class segundaFaze : Fragment() {
             }
         }
 
-        if(fazeViewModel.faze!!.fazeEscolha == 2){
+        if(fazeViewModel.faze!!.fazeEscolha == 2 || fazeViewModel.faze!!.fazeEscolhaVolta == 2){
             textViewEvento.text = "Sem muita experiencia voce tenta imobilizar a criatura ou apenas tentar dificultar a moviementação dela de alguma forma, bem as " +
                     "pernas são um otimo alvo entao sem nem pensar 2 vezes voce corre em direção a criatura mas um inexperado acontece, ela parece que percebe sua intenção " +
                     "e rapidamente vira o rosto para voce so que a mesma parece não estar olhando diretamente para voce o que lhe faz se distrair e um ataque frontal é dirigido a voce " +
@@ -102,6 +104,11 @@ class segundaFaze : Fragment() {
             }
         }
 
+        btnVoltar.setOnClickListener {
+            fazeViewModel.faze.adicionaVida()
+            findNavController().navigate(R.id.primeiraFase)
+
+        }
 
     }
 

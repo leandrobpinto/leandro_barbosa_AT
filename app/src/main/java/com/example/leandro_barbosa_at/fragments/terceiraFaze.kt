@@ -8,12 +8,20 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import com.example.leandro_barbosa_at.FinalActivity
 import com.example.leandro_barbosa_at.FinalDerrotaActivity
+import com.example.leandro_barbosa_at.MainActivity
 
 import com.example.leandro_barbosa_at.R
 import com.example.leandro_barbosa_at.viewModel.FazeViewModel
+import kotlinx.android.synthetic.main.fragment_segunda_faze.*
 import kotlinx.android.synthetic.main.fragment_terceira_faze.*
+import kotlinx.android.synthetic.main.fragment_terceira_faze.RbEscolha1
+import kotlinx.android.synthetic.main.fragment_terceira_faze.RbEscolha2
+import kotlinx.android.synthetic.main.fragment_terceira_faze.btnAvançar
+import kotlinx.android.synthetic.main.fragment_terceira_faze.btnVoltar
+import kotlinx.android.synthetic.main.fragment_terceira_faze.textViewEvento
 
 /**
  * A simple [Fragment] subclass.
@@ -59,16 +67,15 @@ class terceiraFaze : Fragment() {
                         var fazeEscolha = fazeViewModel.faze.fazeEscolha
                         intent.putExtra("fazeEscolha", fazeEscolha)
                         startActivity(intent)
-
-
                     }else{
 
                         fazeViewModel.faze!!.fazeEscolha = 5
                         val intent = Intent(activity!!.baseContext, FinalDerrotaActivity::class.java)
                         var fazeEscolha = fazeViewModel.faze.fazeEscolha
                         intent.putExtra("fazeEscolha", fazeEscolha)
-                        startActivity(intent)
                         fazeViewModel.faze.vida(25)
+                        startActivity(intent)
+
 
                     }
                 }
@@ -97,8 +104,9 @@ class terceiraFaze : Fragment() {
                         val intent = Intent(activity!!.baseContext, FinalDerrotaActivity::class.java)
                         var fazeEscolha = fazeViewModel.faze.fazeEscolha
                         intent.putExtra("fazeEscolha", fazeEscolha)
-                        startActivity(intent)
                         fazeViewModel.faze.vida(25)
+                        startActivity(intent)
+
 
 
                     }else{
@@ -138,9 +146,10 @@ class terceiraFaze : Fragment() {
                         val intent = Intent(activity!!.baseContext, FinalDerrotaActivity::class.java)
                         var fazeEscolha = fazeViewModel.faze.fazeEscolha
                         intent.putExtra("fazeEscolha", fazeEscolha)
+                        fazeViewModel.faze.vida(25)
                         startActivity(intent)
 
-                        fazeViewModel.faze.vida(25)
+
                     }else{
 
                         fazeViewModel.faze!!.fazeEscolha = 10
@@ -154,6 +163,12 @@ class terceiraFaze : Fragment() {
                 }
             }
         }
+            btnVoltar.setOnClickListener {
+                fazeViewModel.faze.adicionaVida()
+
+                findNavController().navigate(R.id.segundaFaze)
+            }
+
     }
 }
 

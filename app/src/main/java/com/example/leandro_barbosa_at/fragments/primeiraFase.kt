@@ -1,5 +1,6 @@
 package com.example.leandro_barbosa_at.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
+import com.example.leandro_barbosa_at.MainActivity
 
 import com.example.leandro_barbosa_at.R
 import com.example.leandro_barbosa_at.viewModel.FazeViewModel
@@ -46,14 +48,22 @@ class primeiraFase : Fragment() {
                 if (RbEscolha1.isChecked){
 
                     fazeViewModel.faze!!.fazeEscolha = 1
+                    fazeViewModel.faze!!.fazeEscolhaVolta = 1
                     findNavController().navigate(R.id.segundaFaze)
                 }else{
 
                     fazeViewModel.faze!!.fazeEscolha = 2
-                    findNavController().navigate(R.id.segundaFaze)
+                    fazeViewModel.faze!!.fazeEscolhaVolta = 2
                     fazeViewModel.faze.vida(25)
+                    findNavController().navigate(R.id.segundaFaze)
+
                 }
             }
+        }
+        btnVoltar.setOnClickListener {
+
+            val intent = Intent(activity!!.baseContext, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 
