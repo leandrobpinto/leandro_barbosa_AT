@@ -32,4 +32,14 @@
 
     </string>
     <string name="guerreiro">guerreiro</string>
+    <string name="Rbescolha1">Correr em sua direção e acerta-lo com o escudo</string>
+    <string name="Rbescolha2">fazer um corte na vertical em suas pernas para imobiliza-lo</string>
+    <string name="btnavancar">Avançar</string>
+    <string name="btnVoltar">Voltar</string>
+    <string name="btnRecomecar">Recomeçar</string>
+    <string name="btnJogar">Começar a Jogar</string>
+    <string name="suaVida">Sua vida</string>
+    <string name="status">status</string>
+    <string name="valor_status">status</string>
+
 </resources>

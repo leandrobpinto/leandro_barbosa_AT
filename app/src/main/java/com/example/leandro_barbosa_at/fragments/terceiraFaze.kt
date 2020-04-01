@@ -73,7 +73,7 @@ class terceiraFaze : Fragment() {
                         val intent = Intent(activity!!.baseContext, FinalDerrotaActivity::class.java)
                         var fazeEscolha = fazeViewModel.faze.fazeEscolha
                         intent.putExtra("fazeEscolha", fazeEscolha)
-                        fazeViewModel.faze.vida(25)
+                        fazeViewModel.faze.vida(100)
                         startActivity(intent)
 
 
@@ -104,7 +104,7 @@ class terceiraFaze : Fragment() {
                         val intent = Intent(activity!!.baseContext, FinalDerrotaActivity::class.java)
                         var fazeEscolha = fazeViewModel.faze.fazeEscolha
                         intent.putExtra("fazeEscolha", fazeEscolha)
-                        fazeViewModel.faze.vida(25)
+                        fazeViewModel.faze.vida(100)
                         startActivity(intent)
 
 
@@ -146,7 +146,7 @@ class terceiraFaze : Fragment() {
                         val intent = Intent(activity!!.baseContext, FinalDerrotaActivity::class.java)
                         var fazeEscolha = fazeViewModel.faze.fazeEscolha
                         intent.putExtra("fazeEscolha", fazeEscolha)
-                        fazeViewModel.faze.vida(25)
+                        fazeViewModel.faze.vida(100)
                         startActivity(intent)
 
 

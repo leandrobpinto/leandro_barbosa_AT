@@ -49,13 +49,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
-                android:text="Correr em sua direção e acerta-lo com o escudo" />
+                android:text="@string/Rbescolha1" />
 
             <RadioButton
                 android:id="@+id/RbEscolha2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="fazer um corte na vertical em suas pernas para imobiliza-lo" />
+                android:text="@string/Rbescolha2" />
         </RadioGroup>
 
         <Button
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="Avançar"
+            android:text="@string/btnavancar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintHorizontal_bias="1.0"
@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="Voltar"
+            android:text="@string/btnVoltar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintHorizontal_bias="0.0"

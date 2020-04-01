@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 data = Uri.parse("mailto:") // only email apps should handle this
                 putExtra(Intent.EXTRA_EMAIL, "leandro.bpinto@al.infnet.edu.br")
                 putExtra(Intent.EXTRA_CC, "Nota do Jogo")
-                putExtra(Intent.EXTRA_TEXT, "De 1 a 10 o quanto voce gostou do jogo?")
+                putExtra(Intent.EXTRA_TEXT, "Envie para os seus amigos qual foi o seu sinal")
             }
             if (intent.resolveActivity(packageManager) != null) {
                 startActivity(intent)
